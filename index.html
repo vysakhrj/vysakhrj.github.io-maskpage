@@ -1,0 +1,271 @@
+<html>
+<head>
+	<title>The Mask Company</title>
+	<link rel = "icon" href="img/icon.png"
+        type = "image/x-icon"> 
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		  }
+		  myIndex++;
+		  if (myIndex > x.length) {myIndex = 1}    
+		  x[myIndex-1].style.display = "block";  
+		  setTimeout(carousel, 5000);    
+		}	
+	</script>
+	<script>
+			const sectionsArray=document.querySelectorAll('section');
+			const sectionsPos={};
+
+			sectionsArray.forEach((section) =>{
+				sectionsPos[section.id]=section.offsetTop;
+			});
+
+			window.onscroll=()	=>{
+				var scrollPosition= document.documentElement.scrollTop|| document.body.scrollTop;
+				
+				for(id in sectionPos){
+					if(sectionsPos[id]<= scrollPosition) {
+						document,querySelector('.active').classList.remove('active');
+						document.querySelector('a[href*=${id}]').classList.add('active');
+					}
+				}
+			};
+
+			$(function() {
+				$(document).scroll(function() {
+					var $nav= $(".navbar");
+					$nav.toggleClass('scrolled', $(this).scrollTop()>$nav.height());
+				});
+			});
+				
+				function send() {
+					  alert("Message Sent");
+				}
+	</script>
+	
+	
+</head>
+<body onload="carousel();">
+<nav class="navbar fixed-top" >
+		<a class="navbar-brand" href="#">
+		<img width="150px" height="50px"  src="img/logo_with_name.png"/>
+		</a>
+		<div class="links-wrapper">
+			<ul class="links">
+				<li><a href="#home" class="active">HOME</a></li>
+				<li><a href="#discover" class="active">DISCOVER</a></li>
+				<li><a href="#features" class="active">FEATURES</a></li>
+				<li><a href="#contact" class="active">CONTACT</a></li>
+				<li><a href=""><i class="fa fa-cart-plus fa-lg" aria-hidden="true" style="font-size:25px; color:#CFAD56;" ></i></a></li>
+				<li><a href=""><i class="fa fa-user fa-lg" style="font-size:22px; color:white;" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="sections">
+		<section id="home">
+		<h1 class="heading1" >HEROES WEAR</h1>	
+		<h1 class="heading2">MASKS</h1>
+		<p class="home_detail">LET'S BE ON THE MOVE AGAINST<br>NOVEL COVID-19 VIRUS<br>WITH OUR LATEST TECHNOLOGY MASKS</p>
+		<img class="map" src="img/map_yellow.png"/>
+		</section>
+		<section id="discover">
+		<div class="container">
+			<h2> Our Products</h2>
+			<div class="row">
+					<div class="col-md-3">
+						<div class="product-top">
+							<img class="product-image" src="img/product1.jpg">
+								<div class= "overlay">
+								<button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+								</div>
+						</div>
+						<div class="product-bottom text-center">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<h3>N99 Mask</h3>
+							<h5>₹999.00</h5>
+						
+						
+						
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="product-top">
+							<img class="product-image" src="img/product2.png">
+								<div class= "overlay">
+								<button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+								</div>
+						</div>
+						<div class="product-bottom text-center">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<h3>N93 Mask</h3>
+							<h5>₹199.00</h5>
+						
+						
+						
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="product-top">
+							<img class="product-image" src="img/product3.png">
+								<div class= "overlay">
+								<button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+								</div>
+						</div>
+						<div class="product-bottom text-center">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<h3>N95 Mask</h3>
+							<h5>₹299.00</h5>
+						
+						
+						
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="product-top">
+							<img class="product-image" src="img/product4.jpg">
+								<div class= "overlay">
+								<button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+								<button type="button" class="btn btn-secondary" title="Add to cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+								</div>
+						</div>
+						<div class="product-bottom text-center">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+							<h3>N98 Mask</h3>
+							<h5>₹599.00</h5>
+						
+						
+						
+						</div>
+					</div>
+			</div>
+		</div>
+					
+
+		</section>
+		<section id="features">
+			<div class="row" style="margin-top:100px;" >
+					<div class="col-md-6">
+						
+							
+								<div class="img-container">
+									<img class="slider_image_def"  src = "mask_gif.gif">
+								</div>
+								
+					</div>
+					
+					<div class="col-md-6" style="margin-top:20px;">
+						<h3 style="color:#D1A638; font-family:Arvo;"> OUR SPECIALITIES</h3>
+						
+						<p style="margin-top:50px; margin-left:20px; color:#fff; font-family:Arvo; width:90%;" > We have been keen in building masks with our latest technological advancements.
+							Our latest infiltration control technology prevents dust and other particles to enter inside.
+							We provide <span style="color:#D1A638;">4 layers </span>of protection in each of the masks. 
+							<br><br>
+							The <span style="color:#D1A638;">Bio-Infiltrate Controller</span> destroys the virus and all the harmful air spread micro-organisms.
+							This is a patented technology which is proven effective in preventing all the air-borne diseases 
+							and also the novel <span style="color:#D24949;">COVID-19</span> virus.</p>
+								
+					</div>
+			</div>
+		</section>
+		<section id="contact">
+		
+		<div>
+		
+			<div class="row" style="margin-top:45px;" >
+					<div class="col-md-6" style="margin-top:20px;">
+
+						<div class="w3-content w3-display-container" style="max-width:450px; margin-left:118px; margin-top:-10px;">
+						  <img class="mySlides w3-animate-fading" src="img/gallery1.png" style="width:100%; height:300px; border-radius:10px" >
+						  <img class="mySlides w3-animate-fading" src="img/gallery2.png" style="width:100%; height:300px; border-radius:10px" >
+						  <img class="mySlides w3-animate-fading" src="img/gallery3.png" style="width:100%; height:300px; border-radius:10px" >
+						  <img class="mySlides w3-animate-fading" src="img/gallery4.png" style="width:100%; height:300px; border-radius:10px" >
+						
+						</div>
+						
+						<p style="max-width:850px; margin-left:75px; margin-top:18px; color:white;"> <span style="color:#D1A638;">The Mask Company</span> is a startup incubated on 
+						<span style="color:#D1A638;">Government Engineering College Barton Hill.</span>
+						We are the young but bold set of people who are bringing the latest technological innovations for 
+						a social cause. We in The Mask Company combines technological advancements in the air purification industry
+						and implement it within athe size of a daily use mask. This is a ground breaking patent pending technology.
+						</p>
+								
+					</div>	
+				<div class="col-md-6" style="margin-top:10px;">		
+					<div class="contact-section">
+					
+						<h2> Contact Us</h2>
+						<form class="contact-form" method="POST">
+							<input type="text" class="contact-form-text" placeholder="Your Name">
+							<input type="text" class="contact-form-text" placeholder="Your Email">
+							<input type="text" class="contact-form-text" placeholder="Your Phone Number">
+							<textarea class="contact-form-text" placeholder="Your Message" rows="6" cols="25"></textarea>
+							<input type="submit" onclick="send()" class="contact-form-button" value="Send">
+						</form>
+					</div>	
+				</div>		
+			</div>	
+			
+			
+		</div>	
+			
+			
+		</section>
+		
+	</div>
+	<footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="float-sm-left">
+                        <h5>
+						Designed And Developed by Vysakh R J<br>2020 © All Rights Reserved.</h5>
+                    </div>
+                    <div class="float-sm-right">
+                        <ul>
+							<li><a href=""><i class="fa fa-play"></i></a></li>
+                            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+	
+</body>
+</html>
